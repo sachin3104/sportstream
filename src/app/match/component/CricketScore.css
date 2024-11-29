@@ -1,0 +1,9 @@
+.gradient-text {
+  background: linear-gradient(
+    to top,
+    #6b7280,
+    #90ee90
+  ); /* Gray-700 to Black gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
