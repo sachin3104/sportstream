@@ -11,6 +11,7 @@ import {
   LineController,
 } from "chart.js";
 import { RxBorderWidth } from "react-icons/rx";
+import { useMatch } from "@/utils/context/MatchContext";
 // import { tailwindColors } from '../utils/tailwindColors';
 
 // Register necessary components from Chart.js
@@ -25,7 +26,8 @@ Chart.register(
   LineController
 );
 
-const RunRate = ({ matchData }) => {
+const RunRate = () => {
+  const { matchData } = useMatch();
   function getRunRatePerOver(teamName) {
     const teamInnings = matchData.innings.find(
       (inning) => inning.team === teamName
@@ -44,10 +46,8 @@ const RunRate = ({ matchData }) => {
   }
   const teamNames = matchData.info.teams;
   const team1Runrate = getRunRatePerOver(teamNames[0]);
-  //   console.log("team run rate", team1Runrate);
   const team2Runrate = getRunRatePerOver(teamNames[1]);
   const teamRunRates = [team1Runrate, team2Runrate];
-  //   console.log(matchData);
 
   const chartRef = useRef(null);
 

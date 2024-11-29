@@ -14,7 +14,7 @@ export function modifyMatchData(originalData) {
     });
     teamRunsSummary[teamName] = totalRuns;
   });
-  console.log("Team runs", teamRunsSummary);
+  console.log(teamRunsSummary);
   return teamRunsSummary;
 }
 
@@ -75,6 +75,8 @@ export function analyzeCricketData(data) {
     stats.runRate = (stats.totalRuns / stats.totalBalls) * 6; // Runs per over
     stats.wicketFrequency = stats.totalBalls / (stats.totalWickets || 1); // Average balls per wicket
   }
+  // console.log("match Data", matchUpData);
+  // console.log("Team Stats", teamStats);
 
   return {
     matchUpData,
