@@ -5,24 +5,22 @@ import Link from "next/link";
 
 const MatchesList = ({ matches }) => {
   return (
-    <div className="w-full max-w-3xl mx-auto mt-4 p-3 bg-gray-900 rounded-md shadow-md">
+    <div className="w-[600px] font-nunito text-white  font-thin  max-w-3xl mx-auto mt-4 p-3 bg-transparent rounded-md ">
       {/* Match Results Heading */}
-      <h2 className="text-xl font-bold mb-3 text-center text-orange-500">
-        Match Results
-      </h2>
+      <h2 className="mb-3 text-center text-[#90ee90]">Match Results</h2>
 
       {/* Scrollable Match List */}
-      <div className="h-[500px] overflow-y-auto scrollbar-thin scrollbar-thumb-orange-500 scrollbar-track-gray-900">
+      <div className="h-[500px] overflow-y-auto scrollbar-thin scrollbar-thumb-[#90ee90] scrollbar-track-black">
         {matches.length === 0 ? (
-          <p className="text-center p-4 text-gray-400">
-            No matches were found.
+          <p className="text-center p-4 font-nunito text-gray-700  font-thin">
+            Try Searching for a Cricket Match
           </p>
         ) : (
-          matches.slice(0, 10).map((match) => (
+          matches.slice(0, 50).map((match) => (
             <Link key={match.matchId} href={`/match/${match.matchId}`}>
-              <div className="p-2 bg-gray-800 text-white rounded-md transition-all duration-200 cursor-pointer hover:bg-orange-200 hover:text-black hover:shadow-lg flex flex-col items-center">
+              <div className="p-2 bg-transparent font-nunito text-white  font-thin rounded-md transition-all duration-200 cursor-pointer hover:bg-gray-300 hover:text-black hover:shadow-lg flex flex-col items-center">
                 {/* Team Names Highlighted */}
-                <div className="font-semibold text-base text-center">
+                <div className=" text-center">
                   <strong>{match.teams.team1}</strong> vs{" "}
                   <strong>{match.teams.team2}</strong>
                 </div>

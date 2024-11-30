@@ -3,6 +3,8 @@
 import { useState } from "react";
 import SearchBar from "./components/SearchBar";
 import MatchesList from "./components/MatchesList";
+import Header from "./components/Header";
+import Sidebar from "./match/component/Sidebar";
 
 export default function HomePage() {
   const [matches, setMatches] = useState([]);
@@ -36,24 +38,30 @@ export default function HomePage() {
 
   return (
     <>
-      {/* Main Content */}
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-black to-gray-800 text-gray-300">
-        <div className="w-full max-w-3xl flex flex-col items-center space-y-4 px-4">
-          {/* Search Bar */}
-          <SearchBar onSearch={handleSearch} />
+      <Header />
 
-          {/* Loading / Error / Matches List */}
-          {loading ? (
-            <div className="text-center text-gray-400 font-medium">
-              Loading matches...
+      <div className="flex min-h-screen bg-black text-gray-300">
+        <Sidebar />
+
+        <div className="ml-20 w-full">
+          <div className="p-6 border-b border-gray-800 flex justify-center items-center">
+            <SearchBar onSearch={handleSearch} />
+          </div>
+          <div className="p-6 flex justify-center items-center gap-4">
+            <div className="bg-black border border-gray-700 rounded-lg  p-2 w-auto">
+              {loading ? (
+                <div className="text-center text-gray-400 font-medium">
+                  Loading matches...
+                </div>
+              ) : error ? (
+                <div className="text-center text-red-600 font-medium">
+                  {error}
+                </div>
+              ) : (
+                <MatchesList matches={matches} />
+              )}
             </div>
-          ) : error ? (
-            <div className="text-center text-orange-500 font-medium">
-              {error}
-            </div>
-          ) : (
-            <MatchesList matches={matches} />
-          )}
+          </div>
         </div>
       </div>
     </>

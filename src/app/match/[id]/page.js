@@ -21,23 +21,21 @@ export default function MatchDetailPage() {
 
   if (loading) {
     return (
-      <div className="text-center mt-8 text-blue-600">
-        Loading match details...
-      </div>
+      <>
+        <Header />
+
+        <div className="flex min-h-screen bg-black text-gray-300">
+          <Sidebar />
+
+          <div className="ml-20 w-full">Loading...</div>
+        </div>
+      </>
     );
   }
 
   if (error) {
     return <div className="text-center mt-8 text-red-600">{error}</div>;
   }
-
-  // if (!matchInfo) {
-  //   return (
-  //     <div className="text-center mt-8">
-  //       No details available for this match.
-  //     </div>
-  //   );
-  // }
 
   const teams = matchData.info.teams;
 
