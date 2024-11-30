@@ -7,12 +7,14 @@ const MatchesList = ({ matches }) => {
   return (
     <div className="w-[600px] font-nunito text-white  font-thin  max-w-3xl mx-auto mt-4 p-3 bg-transparent rounded-md ">
       {/* Match Results Heading */}
-      <h2 className="mb-3 text-center text-[#90ee90]">Match Results</h2>
+      {matches.length !== 0 && (
+        <h2 className="mb-3 text-center text-[#90ee90]">Match Results</h2>
+      )}
 
       {/* Scrollable Match List */}
       <div className="h-[500px] overflow-y-auto scrollbar-thin scrollbar-thumb-[#90ee90] scrollbar-track-black">
         {matches.length === 0 ? (
-          <p className="text-center p-4 font-nunito text-gray-700  font-thin">
+          <p className="text-center p-4 font-nunito text-gray-500  font-thin">
             Try Searching for a Cricket Match
           </p>
         ) : (
