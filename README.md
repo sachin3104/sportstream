@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# SportStream - Cricket Match Analytics Platform 🏏
 
-## Getting Started
+## About
 
-First, run the development server:
+SportStream is a modern cricket analytics platform that transforms raw cricket match data into interactive visualizations and insightful statistics. The platform aims to enhance the cricket viewing experience by providing real-time match analytics and historical performance data.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### What We're Demonstrating
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+The project demonstrates how large volumes of cricket match data can be efficiently processed, analyzed, and presented in an intuitive interface. It showcases:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Historical cricket match analysis
+- Player performance metrics
+- Team statistics and comparisons
+- Interactive data exploration
 
-## Learn More
+### Data Flow Architecture
 
-To learn more about Next.js, take a look at the following resources:
+1. **Data Collection Layer**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   - Raw cricket match data stored in JSON format
+   - Structured data organization for matches, players, and teams
+   - Efficient indexing system for quick data retrieval
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. **Processing Layer**
 
-## Deploy on Vercel
+   - Statistical analysis of historical matches
+   - Performance metrics calculation
+   - Data aggregation for visualizations
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. **Presentation Layer**
+   - Interactive dashboard interface
+   - Dynamic charts and graphs
+   - Responsive design for all devices
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Key Features
+
+### 🎯 Match Analytics
+
+- Team performance comparisons
+- Player matchup statistics
+
+### 💡 Interactive Features
+
+- Advanced match search functionality
+- Custom date range analysis
+- Team and player filtering
+- Performance trend visualization
+
+### 📊 Data Visualization
+
+- Run rate progression charts
+- Partnership analysis
+- Bowler-Batsman matchup graphs
+- Team scoring patterns
+
+## Technology Overview
+
+- Modern web architecture using Next.js
+- Responsive design with Tailwind CSS
+- Efficient caching system
+- Interactive data visualization
+
+## Live Demo
+
+Experience the platform live at: [SportStream Live](https://sportstream-demo.vercel.app)
+
+## Created By
+
+**Sachin Jakhar**
+
+- A passionate developer focused on creating intuitive sports analytics platforms
+- Committed to enhancing the cricket viewing experience through technology
+
+## Future Enhancements
+
+- Integration with live match feeds
+- Advanced predictive analytics
+- Mobile application development
+- Enhanced social features
+- Extended historical match database
+
+---
+
+_This project showcases the intersection of cricket analytics and modern web technology, providing a comprehensive platform for cricket enthusiasts to explore and analyze the game in depth._
