@@ -14903,16 +14903,5 @@
       "team1": "Australia",
       "team2": "England"
     }
-  },
-  {
-    "date": "2001-12-19",
-    "type": "international",
-    "format": "Test",
-    "gender": "male",
-    "matchId": "63963",
-    "teams": {
-      "team1": "England",
-      "team2": "India"
-    }
   }
 ]
