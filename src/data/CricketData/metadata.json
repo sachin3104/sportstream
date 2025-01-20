@@ -14025,17 +14025,6 @@
     }
   },
   {
-    "date": "2003-05-17",
-    "type": "international",
-    "format": "ODI",
-    "gender": "male",
-    "matchId": "64820",
-    "teams": {
-      "team1": "Australia",
-      "team2": "West Indies"
-    }
-  },
-  {
     "date": "2003-05-11",
     "type": "international",
     "format": "ODI",
