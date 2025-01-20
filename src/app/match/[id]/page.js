@@ -47,7 +47,7 @@ export default function MatchDetailPage() {
         <Sidebar />
 
         <div className="ml-20 w-full">
-          <div className="p-6 border-b border-gray-800">
+          <div className="p-6 border-b border-gray-800 ">
             <CricketScore
               team1Name={teams[0]}
               team1Score="120-0"

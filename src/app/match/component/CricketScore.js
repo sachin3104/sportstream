@@ -12,7 +12,7 @@ const CricketScore = ({
 }) => {
   return (
     <>
-      <div className="flex w-full">
+      <div className="flex w-full items-center justify-center">
         <div className="w-1/3 flex flex-col items-center justify-between">
           {/* Score Display Section */}
           <div className="w-full flex justify-between items-center font-thin font-nunito">
@@ -45,7 +45,6 @@ const CricketScore = ({
             </span>
           </div>
         </div>
-        <div className="w-1/2"></div>
       </div>
     </>
   );

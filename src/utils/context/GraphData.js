@@ -14,7 +14,7 @@ export function modifyMatchData(originalData) {
     });
     teamRunsSummary[teamName] = totalRuns;
   });
-  console.log(teamRunsSummary);
+  console.log("Teams Runs Summary", teamRunsSummary);
   return teamRunsSummary;
 }
 
