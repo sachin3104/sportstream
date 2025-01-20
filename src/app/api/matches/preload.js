@@ -15,14 +15,22 @@ export const preloadMetadata = async () => {
     if (isMetadataLoaded) {
       return;
     }
-    // Define the path to metadata.json
+    // Define the path to the BIGGER DATASET
+    // const metadataPath = path.join(
+    //   process.cwd(),
+    //   "..",
+    //   "CricketData",
+    //   "metadata.json"
+    // );
+
+    // Path to DATASET in src/data/CricketData
     const metadataPath = path.join(
       process.cwd(),
-      "..",
+      "src",
+      "data",
       "CricketData",
       "metadata.json"
     );
-    // console.log("Current Working Directory:", process.cwd());
 
     if (!fs.existsSync(metadataPath)) {
       console.error("Metadata file does not exist at:", metadataPath);

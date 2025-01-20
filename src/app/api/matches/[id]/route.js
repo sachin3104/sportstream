@@ -22,10 +22,19 @@ export async function GET(req, context) {
       return NextResponse.json(matchCache.get(id), { status: 200 });
     }
 
-    // Define the path to the specific match file using the match ID
+    // Path to ALL THE MATCHES
+    // const matchFilePath = path.join(
+    //   process.cwd(),
+    //   "..",
+    //   "CricketData",
+    //   `${id}.json`
+    // );
+
+    // Path to SOME SPECIFIC MATCHES src/data/CricketData
     const matchFilePath = path.join(
       process.cwd(),
-      "..",
+      "src",
+      "data",
       "CricketData",
       `${id}.json`
     );
