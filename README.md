@@ -64,7 +64,7 @@ The project demonstrates how large volumes of cricket match data can be efficien
 
 ## Live Demo
 
-Experience the platform live at: [SportStream Live](https://sportstream-demo.vercel.app)
+Experience the platform live at: [SportStream Live](https://sportstream-eta.vercel.app)
 
 ## Created By
 
